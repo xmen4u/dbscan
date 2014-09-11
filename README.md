@@ -2,7 +2,6 @@ Clustering - DBScan algorithm
 ==============================
 
 A node module, that uses DBScan unsupervised clustering algorithm, i'll further write about it's limitations, etc.. 
-Will also add a Front-end example. 
 
 You'll find a pre-made 100 points 16-features vector sample file
 Uses stream, readline node modules
@@ -19,3 +18,8 @@ ToC
 
 <a name="main">Main app</a>
 ---------------------
+
+
+points over map:
+![](https://raw.githubusercontent.com/xmen4u/dbscan/master/img1.png)
+![](https://raw.githubusercontent.com/xmen4u/dbscan/master/img2.png)

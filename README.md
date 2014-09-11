@@ -5,8 +5,8 @@ A node module, that uses DBScan unsupervised clustering algorithm, to return cen
 
 
 This algorithm doesn't handle well:
-1) Large datasets [computational complexity]
-2) Number of dimensions ( > 16) - more computaitons, "curse of dimensionality"
+1. Large datasets [computational complexity]
+2. Number of dimensions ( > 16) - more computaitons, "curse of dimensionality"
 
 about (2), given a fixed amount of points, the density of the points decreases exponentially.  Meaning you won't be able 
 to find cluster as you'll be wandering a lot.

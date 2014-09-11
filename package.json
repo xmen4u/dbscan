@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "jshint": "^2.5.5",
+    "matchdep": "^0.3.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}

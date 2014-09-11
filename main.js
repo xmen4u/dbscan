@@ -12,7 +12,7 @@
 **/
 
 // global variable definition
-var Distance 	 = require("./lib/distance"),
+var Distance 	 = require('./lib/distance'),
 	distances    = new Distance(),
 	// DBScan section
 	DBScan       = require('./lib/dbscan.js'),
@@ -21,7 +21,6 @@ var Distance 	 = require("./lib/distance"),
 	fs           = require('fs'),
 	readline     = require('readline'), // using the UNSTABLE readline built-in node module
 	// Stream section
-	stream       = require('stream'),
 	points       = [],
 	rl, // read-line
 	in_stream;
@@ -74,18 +73,17 @@ function distanceFunction(v1,v2){
 }// distanceFunction
 
 
-instream = fs.createReadStream('./points.txt'),
-rl = readline.createInterface({
-							input: instream,
-							terminal: false
-						  })
+in_stream = fs.createReadStream('./points.txt'),
+rl = readline.createInterface({input: in_stream,terminal: false})
 
 rl.on('line', function(line) {
 	points.push(JSON.parse(line))
 });
 
 
-rl.on('close', function(line) {
+rl.on('close', function() {
     var clustering_obj = dbscan.cluster(points,distanceFunction)
-    console.log('FINISHED reading ' + points.length + ' and clustering them');
+    console.log('FINISHED reading ' + points.length + ' and clustering them')
+    console.log(clustering_obj)
+
 });

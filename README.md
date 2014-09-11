@@ -20,6 +20,8 @@ You'll find a pre-made 100 points 16-features vector sample file
 Uses stream, readline node modules
 
 
+using jSHint, matchdep , stream, grunt.js 
+
 Use this with my permission only
 
 ToC
@@ -62,9 +64,9 @@ in code we grab it via stream from a line-by-line [newline] structured flat file
 	points       = [],
 	rl, // read-line
 	in_stream;
-instream = fs.createReadStream('./points.txt'),
+in_stream = fs.createReadStream('./points.txt'),
 rl = readline.createInterface({
-							input: instream,
+							input: in_stream,
 							terminal: false
 						  })
 

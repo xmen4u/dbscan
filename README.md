@@ -43,20 +43,18 @@ Initialization
 
 we need to initialize the distance object, you can add any distance metric you wish 
 to distance.js
-<code>
+```
 var Distance 	 = require("./lib/distance"),
 	distances    = new Distance(),
 	// DBScan section
 	DBScan       = require('./lib/dbscan.js'),
 	dbscan       = new DBScan(distances)
-</code>
-
+```
 after initialization, you need to create a multi-dimensional vector, an array of arrays:
-<code>[[1,2],[1,4],[2,5],[5,9],...,[10,12]]</code>
+```[[1,2],[1,4],[2,5],[5,9],...,[10,12]]```
 
 in code we grab it via stream from a line-by-line [newline] structured flat file [so we won't have limit on memory space]
-<code>
-var fs           = require('fs'), // File section
+```var fs           = require('fs'), // File section
 	readline     = require('readline'), // using the UNSTABLE readline built-in node module
 	// Stream section
 	stream       = require('stream'),
@@ -72,11 +70,9 @@ rl = readline.createInterface({
 rl.on('line', function(line) {
 	points.push(JSON.parse(line))
 });
-</code>
-
+```
 finally we run the clustering:
-<code>
+```
 	var clustering_obj = dbscan.cluster(points,distanceFunction)
     console.log('FINISHED reading ' + points.length + ' and clustering them');
-</code>
-
+```

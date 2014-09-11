@@ -3,8 +3,9 @@ Clustering - DBScan algorithm
 
 A node module, that uses DBScan unsupervised clustering algorithm, to return centroids and their cluster
 
+This algorithm doesn't handle well the following:
 
-This algorithm doesn't handle well:
+
 1. Large datasets [computational complexity]
 2. Number of dimensions ( > 16) - more computaitons, "curse of dimensionality"
 

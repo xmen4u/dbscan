@@ -42,6 +42,15 @@ points over map:
 ![](https://raw.githubusercontent.com/xmen4u/dbscan/master/img2.png)
 
 
+Install
+```
+npm install dbscan
+```
+
+place the ```distance.js``` where ever you want and include it, i've used an iOc style 
+so you could adjust it and plugit in the module
+
+
 Initialization
 
 we need to initialize the distance object, you can add any distance metric you wish 
@@ -50,7 +59,7 @@ to distance.js
 var Distance 	 = require("./lib/distance"),
 	distances    = new Distance(),
 	// DBScan section
-	DBScan       = require('./lib/dbscan.js'),
+	DBScan       = require('dbscan'),
 	dbscan       = new DBScan(distances)
 ```
 after initialization, you need to create a multi-dimensional vector, an array of arrays:

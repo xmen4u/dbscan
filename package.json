@@ -1,4 +1,22 @@
 {
+  "name": "dbscan",
+  "version": "0.0.1",
+  "description": "dbscan clustering algorithm",
+  "main": "lib/dbscan.js", 
+  "scripts":{
+    "test": "for f in tests/*; do echo \"$f\"; node  \"$f\"; done; echo 'passed!'; exit 0"
+  },
+  "respository":{
+    "type": "git",
+    "url": "https://github.com/xmen4u/dbscan"
+  },
+  "keywords": [
+  "dbscan",
+  "cluster",
+  "unsupervized"
+  ],
+  "author": "Gil Tamari",
+  "license": "BSD",
   "dependencies": {
     "jshint": "^2.5.5",
     "matchdep": "^0.3.0"

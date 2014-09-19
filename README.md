@@ -1,4 +1,4 @@
-Clustering - DBScan algorithm
+## Clustering - DBScan algorithm
 ==============================
 
 A node module, that uses DBScan unsupervised clustering algorithm, to return centroids and their cluster
@@ -24,7 +24,7 @@ using jSHint, matchdep , stream, grunt.js
 
 Use this with my permission only
 
-ToC
+## ToC
 ---------------------
 
 1. [Main app](#main)
@@ -42,7 +42,7 @@ points over map:
 ![](https://raw.githubusercontent.com/xmen4u/dbscan/master/img2.png)
 
 
-Install
+## Install
 ```
 npm install dbscan
 ```
@@ -51,7 +51,7 @@ place the ```distance.js``` where ever you want and include it, i've used an iOc
 so you could adjust it and plugit in the module
 
 
-Initialization
+## Initialization
 
 we need to initialize the distance object, you can add any distance metric you wish 
 to distance.js
@@ -66,7 +66,8 @@ after initialization, you need to create a multi-dimensional vector, an array of
 ```[[1,2],[1,4],[2,5],[5,9],...,[10,12]]```
 
 in code we grab it via stream from a line-by-line [newline] structured flat file [so we won't have limit on memory space]
-```var fs           = require('fs'), // File section
+```
+var fs = require('fs'), // File section
 	readline     = require('readline'), // using the UNSTABLE readline built-in node module
 	// Stream section
 	stream       = require('stream'),

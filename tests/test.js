@@ -73,7 +73,7 @@ function distanceFunction(v1,v2){
 }// distanceFunction
 
 
-in_stream = fs.createReadStream('./points.txt'),
+in_stream = fs.createReadStream('./points.txt')
 rl = readline.createInterface({input: in_stream,terminal: false})
 
 rl.on('line', function(line) {
